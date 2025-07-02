@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -16,23 +19,30 @@
             background-color: #0a0a0a;
             color: #e5e5e5;
         }
-        h1, h2, h3, h4 {
+
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: 'Cormorant', serif;
             font-weight: 600;
         }
+
         .hero-bg {
-            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)), 
-                        url('https://images.unsplash.com/photo-1615634263018-4c4c3a9a7a1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)),
+                url('https://images.unsplash.com/photo-1615634263018-4c4c3a9a7a1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
         }
+
         .about-bg {
-            background: linear-gradient(rgba(10, 20, 15, 0.9), rgba(10, 20, 15, 0.9)), 
-                        url('https://images.unsplash.com/photo-1615634263018-4c4c3a9a7a1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background: linear-gradient(rgba(10, 20, 15, 0.9), rgba(10, 20, 15, 0.9)),
+                url('https://images.unsplash.com/photo-1615634263018-4c4c3a9a7a1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             position: relative;
         }
+
         .about-bg::after {
             content: "";
             position: absolute;
@@ -44,60 +54,76 @@
             opacity: 0.1;
             pointer-events: none;
         }
+
         .texture-bg {
             background-color: #0a0a0a;
             background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');
         }
+
         .product-card {
             transition: all 0.3s ease;
             background: linear-gradient(145deg, #121212, #0a0a0a);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
+
         .product-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
             border: 1px solid rgba(212, 175, 55, 0.3);
         }
+
         .gold-accent {
             color: #d4af37;
         }
+
         .gold-border {
             border-color: #d4af37;
         }
+
         .gold-bg {
             background-color: #d4af37;
         }
+
         .dark-green-bg {
             background-color: #0a140f;
         }
+
         .fade-in {
             opacity: 0;
             transition: opacity 0.6s ease-out;
         }
+
         .fade-in.visible {
             opacity: 1;
         }
+
         .cart-sidebar {
             transform: translateX(100%);
             transition: transform 0.3s ease-out;
         }
+
         .cart-sidebar.open {
             transform: translateX(0);
         }
+
         .testimonial-card {
             background: linear-gradient(145deg, #121212, #0a0a0a);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
+
         .gallery-item {
             transition: all 0.4s ease;
         }
+
         .gallery-item:hover {
             transform: scale(1.03);
             z-index: 10;
         }
+
         .nav-link {
             position: relative;
         }
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -108,33 +134,54 @@
             background-color: #d4af37;
             transition: width 0.3s ease;
         }
+
         .nav-link:hover::after {
             width: 100%;
         }
+
         .scroll-down-arrow {
             animation: bounce 2s infinite;
         }
+
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
                 transform: translateY(0);
             }
+
             40% {
                 transform: translateY(-20px);
             }
+
             60% {
                 transform: translateY(-10px);
             }
         }
+
         .floating {
             animation: floating 6s ease-in-out infinite;
         }
+
         @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
         }
     </style>
 </head>
+
 <body class="text-gray-200">
     <!-- Navigation -->
     <nav class="texture-bg fixed w-full z-50 py-4 px-6 shadow-lg">
@@ -152,7 +199,8 @@
             <div class="flex items-center space-x-4">
                 <button id="cart-toggle" class="relative">
                     <i class="fas fa-shopping-bag text-xl gold-accent"></i>
-                    <span id="cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center hidden">0</span>
+                    <span id="cart-count"
+                        class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center hidden">0</span>
                 </button>
                 <button class="md:hidden" id="mobile-menu-toggle">
                     <i class="fas fa-bars text-xl gold-accent"></i>
@@ -176,7 +224,9 @@
                 <h1 class="text-5xl md:text-7xl font-bold mb-6 gold-accent">NAFRI</h1>
                 <h2 class="text-2xl md:text-4xl font-medium mb-8">The Scent of Power</h2>
                 <p class="text-lg md:text-xl mb-12 max-w-2xl mx-auto">Crafted for those who lead, not follow.</p>
-                <a href="#scents" class="inline-block px-8 py-3 gold-bg text-black font-medium rounded-sm hover:bg-opacity-90 transition duration-300">Explore the Collection</a>
+                <a href="#scents"
+                    class="inline-block px-8 py-3 gold-bg text-black font-medium rounded-sm hover:bg-opacity-90 transition duration-300">Explore
+                    the Collection</a>
             </div>
             <div class="mt-20 scroll-down-arrow">
                 <a href="#about" class="text-2xl gold-accent">
@@ -195,13 +245,18 @@
             </div>
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="fade-in">
-                    <img src="lagacy.jpeg" 
-                         alt="NAFRI Perfume" class="w-full h-auto rounded-sm shadow-xl floating">
+                    <img src="lagacy.jpeg" alt="NAFRI Perfume" class="w-full h-auto rounded-sm shadow-xl floating">
                 </div>
                 <div class="fade-in">
-                    <p class="mb-6 text-lg">Born from the ancient traditions of perfumery and modern luxury, NAFRI represents the pinnacle of olfactory artistry. Each fragrance is a carefully composed symphony of rare ingredients, designed to evoke emotion and command attention.</p>
-                    <p class="mb-6 text-lg">Our perfumes are more than scents—they are liquid confidence, bottled elegance, and silent statements of power. Inspired by the bold and the beautiful, NAFRI fragrances are crafted for those who refuse to blend in.</p>
-                    <p class="text-lg">Every drop tells a story of heritage and innovation, blending the finest raw materials from around the world with meticulous craftsmanship that has been perfected over generations.</p>
+                    <p class="mb-6 text-lg">Born from the ancient traditions of perfumery and modern luxury, NAFRI
+                        represents the pinnacle of olfactory artistry. Each fragrance is a carefully composed symphony
+                        of rare ingredients, designed to evoke emotion and command attention.</p>
+                    <p class="mb-6 text-lg">Our perfumes are more than scents—they are liquid confidence, bottled
+                        elegance, and silent statements of power. Inspired by the bold and the beautiful, NAFRI
+                        fragrances are crafted for those who refuse to blend in.</p>
+                    <p class="text-lg">Every drop tells a story of heritage and innovation, blending the finest raw
+                        materials from around the world with meticulous craftsmanship that has been perfected over
+                        generations.</p>
                 </div>
             </div>
         </div>
@@ -213,15 +268,16 @@
             <div class="max-w-4xl mx-auto text-center mb-16 fade-in">
                 <h2 class="text-3xl md:text-5xl font-bold mb-6 gold-accent">Signature Scents</h2>
                 <div class="w-24 h-1 gold-bg mx-auto mb-8"></div>
-                <p class="text-lg max-w-2xl mx-auto">Discover our exclusive collection of fragrances, each crafted to perfection for distinct moments and personalities.</p>
+                <p class="text-lg max-w-2xl mx-auto">Discover our exclusive collection of fragrances, each crafted to
+                    perfection for distinct moments and personalities.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Product 1 -->
                 <div class="product-card p-6 rounded-sm border border-gray-800 fade-in">
                     <div class="mb-4 overflow-hidden rounded-sm">
-                        <img src="royal-oud-NAFRI.jpeg" 
-                             alt="Royal Oud" class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                        <img src="royal-oud-NAFRI.jpeg" alt="Royal Oud"
+                            class="w-full h-64 object-cover transition duration-500 hover:scale-105">
                     </div>
                     <h3 class="text-2xl font-bold mb-2 gold-accent">Royal Oud</h3>
                     <div class="flex justify-between items-center mb-4">
@@ -240,18 +296,20 @@
                         <p class="text-sm text-gray-400">Middle: Rose, Nutmeg</p>
                         <p class="text-sm text-gray-400">Base: Oud, Sandalwood, Amber</p>
                     </div>
-                    <p class="mb-4 italic">"A regal composition that commands attention with its deep woody intensity."</p>
-                    <button class="add-to-cart w-full py-2 border gold-border text-white hover:gold-bg hover:text-black transition duration-300" 
-                            data-id="1" data-name="Royal Oud" data-price="245" data-image="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80">
+                    <p class="mb-4 italic">"A regal composition that commands attention with its deep woody intensity."
+                    </p>
+                    <button
+                        class="add-to-cart w-full py-2 border gold-border text-white hover:gold-bg hover:text-black transition duration-300"
+                        data-id="1" data-name="Royal Oud" data-price="245" data-image="royal-oud-NAFRI.jpeg">
                         Add to Cart
                     </button>
                 </div>
-                
+
                 <!-- Product 2 -->
                 <div class="product-card p-6 rounded-sm border border-gray-800 fade-in">
                     <div class="mb-4 overflow-hidden rounded-sm">
-                        <img src="amber-noir-NAFRI.jpeg" 
-                             alt="Amber Noir" class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                        <img src="amber-noir-NAFRI.jpeg" alt="Amber Noir"
+                            class="w-full h-64 object-cover transition duration-500 hover:scale-105">
                     </div>
                     <h3 class="text-2xl font-bold mb-2 gold-accent">Amber Noir</h3>
                     <div class="flex justify-between items-center mb-4">
@@ -271,17 +329,18 @@
                         <p class="text-sm text-gray-400">Base: Amber, Vanilla, Musk</p>
                     </div>
                     <p class="mb-4 italic">"A sensual, mysterious blend that lingers like a midnight whisper."</p>
-                    <button class="add-to-cart w-full py-2 border gold-border text-white hover:gold-bg hover:text-black transition duration-300" 
-                            data-id="2" data-name="Amber Noir" data-price="195" data-image="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80">
+                    <button
+                        class="add-to-cart w-full py-2 border gold-border text-white hover:gold-bg hover:text-black transition duration-300"
+                        data-id="2" data-name="Amber Noir" data-price="195" data-image="amber-noir-NAFRI.jpeg">
                         Add to Cart
                     </button>
                 </div>
-                
+
                 <!-- Product 3 -->
                 <div class="product-card p-6 rounded-sm border border-gray-800 fade-in">
                     <div class="mb-4 overflow-hidden rounded-sm">
-                        <img src="citrus-blanc-NAFRI.jpeg" 
-                             alt="Citrus Blanc" class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                        <img src="citrus-blanc-NAFRI.jpeg" alt="Citrus Blanc"
+                            class="w-full h-64 object-cover transition duration-500 hover:scale-105">
                     </div>
                     <h3 class="text-2xl font-bold mb-2 gold-accent">Citrus Blanc</h3>
                     <div class="flex justify-between items-center mb-4">
@@ -301,17 +360,18 @@
                         <p class="text-sm text-gray-400">Base: White Musk, Cedar</p>
                     </div>
                     <p class="mb-4 italic">"A vibrant, refreshing burst of sunshine in a bottle."</p>
-                    <button class="add-to-cart w-full py-2 border gold-border text-white hover:gold-bg hover:text-black transition duration-300" 
-                            data-id="3" data-name="Citrus Blanc" data-price="175" data-image="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80">
+                    <button
+                        class="add-to-cart w-full py-2 border gold-border text-white hover:gold-bg hover:text-black transition duration-300"
+                        data-id="3" data-name="Citrus Blanc" data-price="175" data-image="citrus-blanc-NAFRI.jpeg">
                         Add to Cart
                     </button>
                 </div>
-                
+
                 <!-- Product 4 -->
                 <div class="product-card p-6 rounded-sm border border-gray-800 fade-in">
                     <div class="mb-4 overflow-hidden rounded-sm">
-                        <img src="Velvet-Rose.NAFRI.jpeg" 
-                             alt="Velvet Rose" class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                        <img src="Velvet-Rose-NAFRI.jpeg" alt="Velvet Rose"
+                            class="w-full h-64 object-cover transition duration-500 hover:scale-105">
                     </div>
                     <h3 class="text-2xl font-bold mb-2 gold-accent">Velvet Rose</h3>
                     <div class="flex justify-between items-center mb-4">
@@ -331,17 +391,18 @@
                         <p class="text-sm text-gray-400">Base: Patchouli, Cashmere Wood</p>
                     </div>
                     <p class="mb-4 italic">"A romantic, velvety embrace of floral luxury."</p>
-                    <button class="add-to-cart w-full py-2 border gold-border text-white hover:gold-bg hover:text-black transition duration-300" 
-                            data-id="4" data-name="Velvet Rose" data-price="225" data-image="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80">
+                    <button
+                        class="add-to-cart w-full py-2 border gold-border text-white hover:gold-bg hover:text-black transition duration-300"
+                        data-id="4" data-name="Velvet Rose" data-price="225" data-image="Velvet-Rose-NAFRI.jpeg">
                         Add to Cart
                     </button>
                 </div>
-                
+
                 <!-- Product 5 -->
                 <div class="product-card p-6 rounded-sm border border-gray-800 fade-in">
                     <div class="mb-4 overflow-hidden rounded-sm">
-                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80" 
-                             alt="Tobacco Vanille" class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                        <img src="tobacco-vanille-NAFRI.jpeg" alt="Tobacco Vanille"
+                            class="w-full h-64 object-cover transition duration-500 hover:scale-105">
                     </div>
                     <h3 class="text-2xl font-bold mb-2 gold-accent">Tobacco Vanille</h3>
                     <div class="flex justify-between items-center mb-4">
@@ -361,17 +422,19 @@
                         <p class="text-sm text-gray-400">Base: Dried Fruits, Cocoa</p>
                     </div>
                     <p class="mb-4 italic">"A rich, intoxicating blend of sweet and smoky sophistication."</p>
-                    <button class="add-to-cart w-full py-2 border gold-border text-white hover:gold-bg hover:text-black transition duration-300" 
-                            data-id="5" data-name="Tobacco Vanille" data-price="265" data-image="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80">
+                    <button
+                        class="add-to-cart w-full py-2 border gold-border text-white hover:gold-bg hover:text-black transition duration-300"
+                        data-id="5" data-name="Tobacco Vanille" data-price="265"
+                        data-image="tobacco-vanille-NAFRI.jpeg">
                         Add to Cart
                     </button>
                 </div>
-                
+
                 <!-- Product 6 -->
                 <div class="product-card p-6 rounded-sm border border-gray-800 fade-in">
                     <div class="mb-4 overflow-hidden rounded-sm">
-                        <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80" 
-                             alt="Aqua Marine" class="w-full h-64 object-cover transition duration-500 hover:scale-105">
+                        <img src="aqua-marine-NAFRI.jpeg" alt="Aqua Marine"
+                            class="w-full h-64 object-cover transition duration-500 hover:scale-105">
                     </div>
                     <h3 class="text-2xl font-bold mb-2 gold-accent">Aqua Marine</h3>
                     <div class="flex justify-between items-center mb-4">
@@ -391,15 +454,17 @@
                         <p class="text-sm text-gray-400">Base: Driftwood, Amber</p>
                     </div>
                     <p class="mb-4 italic">"A crisp, oceanic breeze captured in liquid form."</p>
-                    <button class="add-to-cart w-full py-2 border gold-border text-white hover:gold-bg hover:text-black transition duration-300" 
-                            data-id="6" data-name="Aqua Marine" data-price="185" data-image="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80">
+                    <button
+                        class="add-to-cart w-full py-2 border gold-border text-white hover:gold-bg hover:text-black transition duration-300"
+                        data-id="6" data-name="Aqua Marine" data-price="185" data-image="aqua-marine-NAFRI.jpeg">
                         Add to Cart
                     </button>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12 fade-in">
-                <a href="#" class="inline-block px-6 py-2 border gold-border text-white hover:gold-bg hover:text-black transition duration-300">
+                <a href="#"
+                    class="inline-block px-6 py-2 border gold-border text-white hover:gold-bg hover:text-black transition duration-300">
                     View All Scents
                 </a>
             </div>
@@ -413,7 +478,7 @@
                 <h2 class="text-3xl md:text-5xl font-bold mb-6 gold-accent">Why Choose NAFRI</h2>
                 <div class="w-24 h-1 gold-bg mx-auto mb-8"></div>
             </div>
-            
+
             <div class="grid md:grid-cols-4 gap-8">
                 <div class="text-center p-6 fade-in">
                     <div class="text-4xl gold-accent mb-4">
@@ -422,7 +487,7 @@
                     <h3 class="text-xl font-bold mb-2">Long-Lasting</h3>
                     <p class="text-gray-400">Our concentrated formulas ensure your scent lasts from dawn till dusk.</p>
                 </div>
-                
+
                 <div class="text-center p-6 fade-in">
                     <div class="text-4xl gold-accent mb-4">
                         <i class="fas fa-leaf"></i>
@@ -430,7 +495,7 @@
                     <h3 class="text-xl font-bold mb-2">Premium Ingredients</h3>
                     <p class="text-gray-400">Sourced from the finest growers worldwide, with uncompromising quality.</p>
                 </div>
-                
+
                 <div class="text-center p-6 fade-in">
                     <div class="text-4xl gold-accent mb-4">
                         <i class="fas fa-heart"></i>
@@ -438,7 +503,7 @@
                     <h3 class="text-xl font-bold mb-2">Skin-Safe</h3>
                     <p class="text-gray-400">Dermatologically tested and free from harsh irritants.</p>
                 </div>
-                
+
                 <div class="text-center p-6 fade-in">
                     <div class="text-4xl gold-accent mb-4">
                         <i class="fas fa-paw"></i>
@@ -457,7 +522,7 @@
                 <h2 class="text-3xl md:text-5xl font-bold mb-6 gold-accent">Client Testimonials</h2>
                 <div class="w-24 h-1 gold-bg mx-auto mb-8"></div>
             </div>
-            
+
             <div class="grid md:grid-cols-2 gap-8 mb-16">
                 <!-- Testimonial 1 -->
                 <div class="testimonial-card p-8 rounded-sm fade-in">
@@ -468,10 +533,13 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="italic mb-6">"NAFRI's Royal Oud is unlike anything I've ever experienced. It's become my signature scent that gets compliments everywhere I go. The longevity is incredible - I can still catch whiffs of it the next morning."</p>
+                    <p class="italic mb-6">"NAFRI's Royal Oud is unlike anything I've ever experienced. It's become my
+                        signature scent that gets compliments everywhere I go. The longevity is incredible - I can still
+                        catch whiffs of it the next morning."</p>
                     <div class="flex items-center">
                         <div class="w-12 h-12 rounded-full bg-gray-700 mr-4 overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James Wilson" class="w-full h-full object-cover">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James Wilson"
+                                class="w-full h-full object-cover">
                         </div>
                         <div>
                             <h4 class="font-bold">James Wilson</h4>
@@ -479,7 +547,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Testimonial 2 -->
                 <div class="testimonial-card p-8 rounded-sm fade-in">
                     <div class="flex gold-accent mb-4">
@@ -489,10 +557,13 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="italic mb-6">"As a perfumer myself, I'm extremely picky about fragrances. NAFRI's attention to detail and quality of ingredients is exceptional. Velvet Rose is my absolute favorite - it's floral but not cloying, sophisticated but approachable."</p>
+                    <p class="italic mb-6">"As a perfumer myself, I'm extremely picky about fragrances. NAFRI's
+                        attention to detail and quality of ingredients is exceptional. Velvet Rose is my absolute
+                        favorite - it's floral but not cloying, sophisticated but approachable."</p>
                     <div class="flex items-center">
                         <div class="w-12 h-12 rounded-full bg-gray-700 mr-4 overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sophia Chen" class="w-full h-full object-cover">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sophia Chen"
+                                class="w-full h-full object-cover">
                         </div>
                         <div>
                             <h4 class="font-bold">Sophia Chen</h4>
@@ -501,15 +572,24 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Review Form -->
             <div class="max-w-2xl mx-auto fade-in">
                 <h3 class="text-2xl font-bold mb-6 text-center gold-accent">Share Your Experience</h3>
-                <form id="review-form" class="bg-black bg-opacity-50 p-8 rounded-sm">
+                <form id="review-form" action="https://formspree.io/f/xqabjkgd" method="POST"
+                    class="bg-black bg-opacity-50 p-8 rounded-sm">
                     <div class="mb-6">
                         <label for="name" class="block mb-2">Your Name</label>
-                        <input type="text" id="name" class="w-full px-4 py-2 bg-gray-900 border border-gray-700 focus:border-gold-500 focus:outline-none">
+                        <input type="text" name="name" id="name" required
+                            class="w-full px-4 py-2 bg-gray-900 border border-gray-700 focus:border-gold-500 focus:outline-none">
                     </div>
+
+                    <div class="mb-6">
+                        <label for="email" class="block mb-2">Your Email</label>
+                        <input type="email" name="email" id="email" required
+                            class="w-full px-4 py-2 bg-gray-900 border border-gray-700 focus:border-gold-500 focus:outline-none">
+                    </div>
+
                     <div class="mb-6">
                         <label class="block mb-2">Rating</label>
                         <div class="flex gold-accent text-2xl">
@@ -519,262 +599,284 @@
                             <i class="far fa-star cursor-pointer" data-rating="4"></i>
                             <i class="far fa-star cursor-pointer" data-rating="5"></i>
                         </div>
-                        <input type="hidden" id="rating" value="0">
+                        <input type="hidden" name="rating" id="rating" value="0">
                     </div>
+
                     <div class="mb-6">
                         <label for="review" class="block mb-2">Your Review</label>
-                        <textarea id="review" rows="4" class="w-full px-4 py-2 bg-gray-900 border border-gray-700 focus:border-gold-500 focus:outline-none"></textarea>
+                        <textarea name="message" id="review" rows="4" required
+                            class="w-full px-4 py-2 bg-gray-900 border border-gray-700 focus:border-gold-500 focus:outline-none"></textarea>
                     </div>
-                    <button type="submit" class="w-full py-3 gold-bg text-black font-medium hover:bg-opacity-90 transition duration-300">Submit Review</button>
+
+                    <button type="submit"
+                        class="w-full py-3 gold-bg text-black font-medium hover:bg-opacity-90 transition duration-300">
+                        Submit Review
+                    </button>
                 </form>
             </div>
-        </div>
-    </section>
 
-    <!-- Lifestyle Gallery Section -->
-    <section id="gallery" class="py-20 dark-green-bg">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center mb-16 fade-in">
-                <h2 class="text-3xl md:text-5xl font-bold mb-6 gold-accent">The NAFRI Lifestyle</h2>
-                <div class="w-24 h-1 gold-bg mx-auto mb-8"></div>
-                <p class="text-lg max-w-2xl mx-auto">Explore the world of NAFRI through our curated gallery of luxury moments.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="gallery-item h-64 overflow-hidden rounded-sm">
-                    <img src="https://images.unsplash.com/photo-1615634263018-4c4c3a9a7a1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                         alt="NAFRI Perfume" class="w-full h-full object-cover hover:scale-110 transition duration-500">
-                </div>
-                <div class="gallery-item h-64 overflow-hidden rounded-sm">
-                    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80" 
-                         alt="NAFRI Perfume" class="w-full h-full object-cover hover:scale-110 transition duration-500">
-                </div>
-                <div class="gallery-item h-64 overflow-hidden rounded-sm">
-                    <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                         alt="NAFRI Perfume" class="w-full h-full object-cover hover:scale-110 transition duration-500">
-                </div>
-                <div class="gallery-item h-64 overflow-hidden rounded-sm">
-                    <img src="https://images.unsplash.com/photo-1616941287619-63ffa0f0c472?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                         alt="NAFRI Perfume" class="w-full h-full object-cover hover:scale-110 transition duration-500">
-                </div>
-                <div class="gallery-item h-64 overflow-hidden rounded-sm">
-                    <img src="https://images.unsplash.com/photo-1615634263018-4c4c3a9a7a1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                         alt="NAFRI Perfume" class="w-full h-full object-cover hover:scale-110 transition duration-500">
-                </div>
-                <div class="gallery-item h-64 overflow-hidden rounded-sm">
-                    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80" 
-                         alt="NAFRI Perfume" class="w-full h-full object-cover hover:scale-110 transition duration-500">
-                </div>
-            </div>
-            
-            <div class="text-center mt-12 fade-in">
-                <a href="#" class="inline-flex items-center px-6 py-2 border gold-border text-white hover:gold-bg hover:text-black transition duration-300">
-                    Follow Us on Instagram
-                    <i class="fab fa-instagram ml-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
 
-    <!-- Newsletter Section -->
-    <section class="texture-bg py-20">
-        <div class="container mx-auto px-6">
-            <div class="max-w-3xl mx-auto text-center fade-in">
-                <h2 class="text-3xl md:text-5xl font-bold mb-6 gold-accent">Join the NAFRI Circle</h2>
-                <div class="w-24 h-1 gold-bg mx-auto mb-8"></div>
-                <p class="text-lg mb-8 max-w-2xl mx-auto">Get early access to new drops, secret scents, and exclusive offers.</p>
-                
-                <form id="newsletter-form" class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
-                    <input type="text" placeholder="Your Name" class="flex-grow px-4 py-3 bg-gray-900 border border-gray-700 focus:border-gold-500 focus:outline-none">
-                    <input type="email" placeholder="Your Email" class="flex-grow px-4 py-3 bg-gray-900 border border-gray-700 focus:border-gold-500 focus:outline-none">
-                    <button type="submit" class="px-6 py-3 gold-bg text-black font-medium hover:bg-opacity-90 transition duration-300">Subscribe</button>
-                </form>
-                
-                <p id="newsletter-success" class="mt-4 text-green-400 hidden">Thank you for subscribing! Welcome to the NAFRI Circle.</p>
-            </div>
-        </div>
-    </section>
+            <!-- Lifestyle Gallery Section -->
+            <section id="gallery" class="py-20 dark-green-bg">
+                <div class="container mx-auto px-6">
+                    <div class="max-w-4xl mx-auto text-center mb-16 fade-in">
+                        <h2 class="text-3xl md:text-5xl font-bold mb-6 gold-accent">The NAFRI Lifestyle</h2>
+                        <div class="w-24 h-1 gold-bg mx-auto mb-8"></div>
+                        <p class="text-lg max-w-2xl mx-auto">Explore the world of NAFRI through our curated gallery of
+                            luxury
+                            moments.</p>
+                    </div>
 
-    <!-- Footer -->
-    <footer class="bg-black py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-                <div>
-                    <h3 class="text-2xl font-bold mb-4 gold-accent">NAFRI</h3>
-                    <p class="mb-4">The Scent of Power</p>
-                    <div class="flex space-x-4 gold-accent text-xl">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="gallery-item h-64 overflow-hidden rounded-sm">
+                            <img src="Velvet-Rose-2-NAFRI.jpeg" alt="NAFRI Perfume"
+                                class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="gallery-item h-64 overflow-hidden rounded-sm">
+                            <img src="aqua-marine-2-NAFRI.jpeg" alt="NAFRI Perfume"
+                                class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="gallery-item h-64 overflow-hidden rounded-sm">
+                            <img src="tobacco-vanille-2-NAFRI.jpeg" alt="NAFRI Perfume"
+                                class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="gallery-item h-64 overflow-hidden rounded-sm">
+                            <img src="natural-fragrance.jpeg" alt="NAFRI Perfume"
+                                class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="gallery-item h-64 overflow-hidden rounded-sm">
+                            <img src="royal-oud-2-NAFRI.jpeg" alt="NAFRI Perfume"
+                                class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="gallery-item h-64 overflow-hidden rounded-sm">
+                            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80"
+                                alt="NAFRI Perfume"
+                                class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-12 fade-in">
+                        <a href="https://www.instagram.com/nafriperfumes?igsh=MWVucGEzb2NodmVjYg==" target="_blank"
+                            class="inline-flex items-center px-6 py-2 border gold-border text-white hover:gold-bg hover:text-black transition duration-300">
+                            Follow Us on Instagram
+                            <i class="fab fa-instagram ml-2"></i>
+                        </a>
                     </div>
                 </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Shop</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:gold-accent transition duration-300">All Perfumes</a></li>
-                        <li><a href="#" class="hover:gold-accent transition duration-300">Best Sellers</a></li>
-                        <li><a href="#" class="hover:gold-accent transition duration-300">New Arrivals</a></li>
-                        <li><a href="#" class="hover:gold-accent transition duration-300">Gift Sets</a></li>
-                    </ul>
+            </section>
+
+            <!-- Newsletter Section -->
+            <section class="texture-bg py-20">
+                <div class="container mx-auto px-6">
+                    <div class="max-w-3xl mx-auto text-center fade-in">
+                        <h2 class="text-3xl md:text-5xl font-bold mb-6 gold-accent">Join the NAFRI Circle</h2>
+                        <div class="w-24 h-1 gold-bg mx-auto mb-8"></div>
+                        <p class="text-lg mb-8 max-w-2xl mx-auto">Get early access to new drops, secret scents, and
+                            exclusive
+                            offers.</p>
+
+                        <form id="newsletter-form" class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+                            <input type="text" placeholder="Your Name"
+                                class="flex-grow px-4 py-3 bg-gray-900 border border-gray-700 focus:border-gold-500 focus:outline-none">
+                            <input type="email" placeholder="Your Email"
+                                class="flex-grow px-4 py-3 bg-gray-900 border border-gray-700 focus:border-gold-500 focus:outline-none">
+                            <button type="submit"
+                                class="px-6 py-3 gold-bg text-black font-medium hover:bg-opacity-90 transition duration-300">Subscribe</button>
+                        </form>
+
+                        <p id="newsletter-success" class="mt-4 text-green-400 hidden">Thank you for subscribing! Welcome
+                            to the
+                            NAFRI Circle.</p>
+                    </div>
                 </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-4">About</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:gold-accent transition duration-300">Our Story</a></li>
-                        <li><a href="#" class="hover:gold-accent transition duration-300">Ingredients</a></li>
-                        <li><a href="#" class="hover:gold-accent transition duration-300">Sustainability</a></li>
-                        <li><a href="#" class="hover:gold-accent transition duration-300">Press</a></li>
-                    </ul>
+            </section>
+
+            <!-- Footer -->
+            <footer class="bg-black py-12">
+                <div class="container mx-auto px-6">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 gold-accent">NAFRI</h3>
+                            <p class="mb-4">The Scent of Power</p>
+                            <div class="flex space-x-4 gold-accent text-xl">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-bold mb-4">Shop</h4>
+                            <ul class="space-y-2">
+                                <li><a href="#" class="hover:gold-accent transition duration-300">All Perfumes</a></li>
+                                <li><a href="#" class="hover:gold-accent transition duration-300">Best Sellers</a></li>
+                                <li><a href="#" class="hover:gold-accent transition duration-300">New Arrivals</a></li>
+                                <li><a href="#" class="hover:gold-accent transition duration-300">Gift Sets</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-bold mb-4">About</h4>
+                            <ul class="space-y-2">
+                                <li><a href="#" class="hover:gold-accent transition duration-300">Our Story</a></li>
+                                <li><a href="#" class="hover:gold-accent transition duration-300">Ingredients</a></li>
+                                <li><a href="#" class="hover:gold-accent transition duration-300">Sustainability</a>
+                                </li>
+                                <li><a href="#" class="hover:gold-accent transition duration-300">Press</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-bold mb-4">Customer Care</h4>
+                            <ul class="space-y-2">
+                                <li><a href="#" class="hover:gold-accent transition duration-300">Contact Us</a></li>
+                                <li><a href="#" class="hover:gold-accent transition duration-300">FAQs</a></li>
+                                <li><a href="#" class="hover:gold-accent transition duration-300">Shipping & Returns</a>
+                                </li>
+                                <li><a href="#" class="hover:gold-accent transition duration-300">Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                        <p class="gold-accent italic">"Luxury isn't bought. It's worn."</p>
+                        <p class="mt-4 text-gray-500 text-sm">© 2023 NAFRI. All rights reserved.</p>
+                    </div>
                 </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Customer Care</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:gold-accent transition duration-300">Contact Us</a></li>
-                        <li><a href="#" class="hover:gold-accent transition duration-300">FAQs</a></li>
-                        <li><a href="#" class="hover:gold-accent transition duration-300">Shipping & Returns</a></li>
-                        <li><a href="#" class="hover:gold-accent transition duration-300">Privacy Policy</a></li>
-                    </ul>
+            </footer>
+
+            <!-- Shopping Cart Sidebar -->
+            <div id="cart-sidebar"
+                class="cart-sidebar fixed top-0 right-0 h-full w-full md:w-1/3 bg-black shadow-xl z-50 overflow-y-auto">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-8">
+                        <h3 class="text-2xl font-bold gold-accent">Your Cart</h3>
+                        <button id="cart-close" class="text-2xl gold-accent">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+
+                    <div id="cart-items" class="mb-6">
+                        <!-- Cart items will be added here dynamically -->
+                        <p class="text-center py-12" id="empty-cart-message">Your cart is empty</p>
+                    </div>
+
+                    <div class="border-t border-gray-700 pt-4 mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span>Subtotal</span>
+                            <span id="cart-subtotal">$0.00</span>
+                        </div>
+                        <div class="flex justify-between mb-4">
+                            <span>Shipping</span>
+                            <span>Calculated at checkout</span>
+                        </div>
+                        <div class="flex justify-between font-bold text-lg">
+                            <span>Total</span>
+                            <span id="cart-total">$0.00</span>
+                        </div>
+                    </div>
+
+                    <button id="checkout-btn"
+                        class="w-full py-3 gold-bg text-black font-medium hover:bg-opacity-90 transition duration-300 mb-4">
+                        Proceed to Checkout
+                    </button>
+                    <button
+                        class="w-full py-3 border gold-border text-white hover:gold-bg hover:text-black transition duration-300">
+                        Continue Shopping
+                    </button>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
-                <p class="gold-accent italic">"Luxury isn't bought. It's worn."</p>
-                <p class="mt-4 text-gray-500 text-sm">© 2023 NAFRI. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
 
-    <!-- Shopping Cart Sidebar -->
-    <div id="cart-sidebar" class="cart-sidebar fixed top-0 right-0 h-full w-full md:w-1/3 bg-black shadow-xl z-50 overflow-y-auto">
-        <div class="p-6">
-            <div class="flex justify-between items-center mb-8">
-                <h3 class="text-2xl font-bold gold-accent">Your Cart</h3>
-                <button id="cart-close" class="text-2xl gold-accent">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            
-            <div id="cart-items" class="mb-6">
-                <!-- Cart items will be added here dynamically -->
-                <p class="text-center py-12" id="empty-cart-message">Your cart is empty</p>
-            </div>
-            
-            <div class="border-t border-gray-700 pt-4 mb-6">
-                <div class="flex justify-between mb-2">
-                    <span>Subtotal</span>
-                    <span id="cart-subtotal">$0.00</span>
-                </div>
-                <div class="flex justify-between mb-4">
-                    <span>Shipping</span>
-                    <span>Calculated at checkout</span>
-                </div>
-                <div class="flex justify-between font-bold text-lg">
-                    <span>Total</span>
-                    <span id="cart-total">$0.00</span>
-                </div>
-            </div>
-            
-            <button id="checkout-btn" class="w-full py-3 gold-bg text-black font-medium hover:bg-opacity-90 transition duration-300 mb-4">
-                Proceed to Checkout
-            </button>
-            <button class="w-full py-3 border gold-border text-white hover:gold-bg hover:text-black transition duration-300">
-                Continue Shopping
-            </button>
-        </div>
-    </div>
+            <!-- Overlay for cart -->
+            <div id="cart-overlay" class="fixed inset-0 bg-black bg-opacity-70 z-40 hidden"></div>
 
-    <!-- Overlay for cart -->
-    <div id="cart-overlay" class="fixed inset-0 bg-black bg-opacity-70 z-40 hidden"></div>
+            <script>
+                // Mobile menu toggle
+                document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
+                    const menu = document.getElementById('mobile-menu');
+                    menu.classList.toggle('hidden');
+                });
 
-    <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
+                // Cart toggle
+                const cartToggle = document.getElementById('cart-toggle');
+                const cartSidebar = document.getElementById('cart-sidebar');
+                const cartClose = document.getElementById('cart-close');
+                const cartOverlay = document.getElementById('cart-overlay');
 
-        // Cart toggle
-        const cartToggle = document.getElementById('cart-toggle');
-        const cartSidebar = document.getElementById('cart-sidebar');
-        const cartClose = document.getElementById('cart-close');
-        const cartOverlay = document.getElementById('cart-overlay');
+                cartToggle.addEventListener('click', function () {
+                    cartSidebar.classList.add('open');
+                    cartOverlay.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                });
 
-        cartToggle.addEventListener('click', function() {
-            cartSidebar.classList.add('open');
-            cartOverlay.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        });
+                cartClose.addEventListener('click', function () {
+                    cartSidebar.classList.remove('open');
+                    cartOverlay.classList.add('hidden');
+                    document.body.style.overflow = '';
+                });
 
-        cartClose.addEventListener('click', function() {
-            cartSidebar.classList.remove('open');
-            cartOverlay.classList.add('hidden');
-            document.body.style.overflow = '';
-        });
+                cartOverlay.addEventListener('click', function () {
+                    cartSidebar.classList.remove('open');
+                    cartOverlay.classList.add('hidden');
+                    document.body.style.overflow = '';
+                });
 
-        cartOverlay.addEventListener('click', function() {
-            cartSidebar.classList.remove('open');
-            cartOverlay.classList.add('hidden');
-            document.body.style.overflow = '';
-        });
+                // Cart functionality
+                let cart = [];
+                const cartItemsContainer = document.getElementById('cart-items');
+                const emptyCartMessage = document.getElementById('empty-cart-message');
+                const cartSubtotal = document.getElementById('cart-subtotal');
+                const cartTotal = document.getElementById('cart-total');
+                const cartCount = document.getElementById('cart-count');
 
-        // Cart functionality
-        let cart = [];
-        const cartItemsContainer = document.getElementById('cart-items');
-        const emptyCartMessage = document.getElementById('empty-cart-message');
-        const cartSubtotal = document.getElementById('cart-subtotal');
-        const cartTotal = document.getElementById('cart-total');
-        const cartCount = document.getElementById('cart-count');
+                document.querySelectorAll('.add-to-cart').forEach(button => {
+                    button.addEventListener('click', function () {
+                        const id = this.getAttribute('data-id');
+                        const name = this.getAttribute('data-name');
+                        const price = parseFloat(this.getAttribute('data-price'));
+                        const image = this.getAttribute('data-image');
 
-        document.querySelectorAll('.add-to-cart').forEach(button => {
-            button.addEventListener('click', function() {
-                const id = this.getAttribute('data-id');
-                const name = this.getAttribute('data-name');
-                const price = parseFloat(this.getAttribute('data-price'));
-                const image = this.getAttribute('data-image');
-                
-                // Check if item already in cart
-                const existingItem = cart.find(item => item.id === id);
-                
-                if (existingItem) {
-                    existingItem.quantity += 1;
-                } else {
-                    cart.push({
-                        id,
-                        name,
-                        price,
-                        image,
-                        quantity: 1
+                        // Check if item already in cart
+                        const existingItem = cart.find(item => item.id === id);
+
+                        if (existingItem) {
+                            existingItem.quantity += 1;
+                        } else {
+                            cart.push({
+                                id,
+                                name,
+                                price,
+                                image,
+                                quantity: 1
+                            });
+                        }
+
+                        updateCart();
+
+                        // Show cart sidebar
+                        cartSidebar.classList.add('open');
+                        cartOverlay.classList.remove('hidden');
+                        document.body.style.overflow = 'hidden';
                     });
-                }
-                
-                updateCart();
-                
-                // Show cart sidebar
-                cartSidebar.classList.add('open');
-                cartOverlay.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            });
-        });
+                });
 
-        function updateCart() {
-            // Update cart UI
-            if (cart.length === 0) {
-                emptyCartMessage.classList.remove('hidden');
-                cartItemsContainer.innerHTML = '';
-            } else {
-                emptyCartMessage.classList.add('hidden');
-                
-                let itemsHTML = '';
-                let subtotal = 0;
-                
-                cart.forEach(item => {
-                    subtotal += item.price * item.quantity;
-                    
-                    itemsHTML += `
+                function updateCart() {
+                    // Update cart UI
+                    if (cart.length === 0) {
+                        emptyCartMessage.classList.remove('hidden');
+                        cartItemsContainer.innerHTML = '';
+                    } else {
+                        emptyCartMessage.classList.add('hidden');
+
+                        let itemsHTML = '';
+                        let subtotal = 0;
+
+                        cart.forEach(item => {
+                            subtotal += item.price * item.quantity;
+
+                            itemsHTML += `
                         <div class="flex items-center py-4 border-b border-gray-700">
                             <div class="w-16 h-16 rounded-sm overflow-hidden mr-4">
                                 <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover">
@@ -793,169 +895,127 @@
                             </div>
                         </div>
                     `;
-                });
-                
-                cartItemsContainer.innerHTML = itemsHTML;
-                
-                // Add event listeners to new buttons
-                document.querySelectorAll('.quantity-btn').forEach(button => {
-                    button.addEventListener('click', function() {
-                        const id = this.getAttribute('data-id');
-                        const action = this.getAttribute('data-action');
-                        
-                        const item = cart.find(item => item.id === id);
-                        
-                        if (action === 'increase') {
-                            item.quantity += 1;
-                        } else if (action === 'decrease' && item.quantity > 1) {
-                            item.quantity -= 1;
-                        }
-                        
-                        updateCart();
-                    });
-                });
-                
-                document.querySelectorAll('.remove-btn').forEach(button => {
-                    button.addEventListener('click', function() {
-                        const id = this.getAttribute('data-id');
-                        cart = cart.filter(item => item.id !== id);
-                        updateCart();
-                    });
-                });
-            }
-            
-            // Update totals
-            const subtotalValue = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            cartSubtotal.textContent = `$${subtotalValue.toFixed(2)}`;
-            cartTotal.textContent = `$${subtotalValue.toFixed(2)}`;
-            
-            // Update cart count
-            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-            if (totalItems > 0) {
-                cartCount.textContent = totalItems;
-                cartCount.classList.remove('hidden');
-            } else {
-                cartCount.classList.add('hidden');
-            }
-        }
+                        });
 
-        // Checkout button
-        document.getElementById('checkout-btn').addEventListener('click', function() {
-            if (cart.length > 0) {
-                alert('Checkout functionality would be implemented here. Items in cart: ' + 
-                      cart.map(item => `${item.name} (${item.quantity})`).join(', '));
-                // In a real implementation, you would redirect to a checkout page or process payment
-            } else {
-                alert('Your cart is empty');
-            }
-        });
+                        cartItemsContainer.innerHTML = itemsHTML;
 
-        // Review form
-        const reviewForm = document.getElementById('review-form');
-        const stars = document.querySelectorAll('[data-rating]');
-        const ratingInput = document.getElementById('rating');
-        
-        stars.forEach(star => {
-            star.addEventListener('click', function() {
-                const rating = parseInt(this.getAttribute('data-rating'));
-                ratingInput.value = rating;
-                
-                stars.forEach((s, index) => {
-                    if (index < rating) {
-                        s.classList.remove('far');
-                        s.classList.add('fas');
+                        // Add event listeners to new buttons
+                        document.querySelectorAll('.quantity-btn').forEach(button => {
+                            button.addEventListener('click', function () {
+                                const id = this.getAttribute('data-id');
+                                const action = this.getAttribute('data-action');
+
+                                const item = cart.find(item => item.id === id);
+
+                                if (action === 'increase') {
+                                    item.quantity += 1;
+                                } else if (action === 'decrease' && item.quantity > 1) {
+                                    item.quantity -= 1;
+                                }
+
+                                updateCart();
+                            });
+                        });
+
+                        document.querySelectorAll('.remove-btn').forEach(button => {
+                            button.addEventListener('click', function () {
+                                const id = this.getAttribute('data-id');
+                                cart = cart.filter(item => item.id !== id);
+                                updateCart();
+                            });
+                        });
+                    }
+
+                    // Update totals
+                    const subtotalValue = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                    cartSubtotal.textContent = `$${subtotalValue.toFixed(2)}`;
+                    cartTotal.textContent = `$${subtotalValue.toFixed(2)}`;
+
+                    // Update cart count
+                    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+                    if (totalItems > 0) {
+                        cartCount.textContent = totalItems;
+                        cartCount.classList.remove('hidden');
                     } else {
-                        s.classList.remove('fas');
-                        s.classList.add('far');
+                        cartCount.classList.add('hidden');
+                    }
+                }
+
+                // Checkout button
+                document.getElementById('checkout-btn').addEventListener('click', function () {
+                    if (cart.length > 0) {
+                        alert('Checkout functionality would be implemented here. Items in cart: ' +
+                            cart.map(item => `${item.name} (${item.quantity})`).join(', '));
+                        // In a real implementation, you would redirect to a checkout page or process payment
+                    } else {
+                        alert('Your cart is empty');
                     }
                 });
-            });
-        });
-        
-        reviewForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const rating = ratingInput.value;
-            const review = document.getElementById('review').value;
-            
-            if (!name || !rating || !review) {
-                alert('Please fill all fields and select a rating');
-                return;
-            }
-            
-            // In a real implementation, you would send this data to your server
-            // For demo purposes, we'll just show an alert
-            alert(`Thank you for your review, ${name}! Your ${rating}-star rating has been submitted.`);
-            
-            // Reset form
-            this.reset();
-            stars.forEach(star => {
-                star.classList.remove('fas');
-                star.classList.add('far');
-            });
-            ratingInput.value = '0';
-        });
 
-        // Newsletter form
-        const newsletterForm = document.getElementById('newsletter-form');
-        const newsletterSuccess = document.getElementById('newsletter-success');
-        
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // In a real implementation, you would send this data to your server
-            // For demo purposes, we'll just show the success message
-            newsletterSuccess.classList.remove('hidden');
-            this.reset();
-            
-            setTimeout(() => {
-                newsletterSuccess.classList.add('hidden');
-            }, 5000);
-        });
+                // Review form
+                const stars = document.querySelectorAll('[data-rating]');
+                const ratingInput = document.getElementById('rating');
 
-        // Scroll animations
-        function checkVisibility() {
-            const elements = document.querySelectorAll('.fade-in');
-            
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                
-                if (elementTop < windowHeight - 100) {
-                    element.classList.add('visible');
-                }
-            });
-        }
-        
-        // Initial check
-        checkVisibility();
-        
-        // Check on scroll
-        window.addEventListener('scroll', checkVisibility);
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
+                stars.forEach(star => {
+                    star.addEventListener('click', function () {
+                        const rating = parseInt(this.getAttribute('data-rating'));
+                        ratingInput.value = rating;
+
+                        stars.forEach((s, index) => {
+                            if (index < rating) {
+                                s.classList.remove('far');
+                                s.classList.add('fas');
+                            } else {
+                                s.classList.remove('fas');
+                                s.classList.add('far');
+                            }
+                        });
                     });
-                    
-                    // Close mobile menu if open
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
+                });
+
+                // Scroll animations
+                function checkVisibility() {
+                    const elements = document.querySelectorAll('.fade-in');
+
+                    elements.forEach(element => {
+                        const elementTop = element.getBoundingClientRect().top;
+                        const windowHeight = window.innerHeight;
+
+                        if (elementTop < windowHeight - 100) {
+                            element.classList.add('visible');
+                        }
+                    });
                 }
-            });
-        });
-    </script>
+
+                // Initial check
+                checkVisibility();
+
+                // Check on scroll
+                window.addEventListener('scroll', checkVisibility);
+
+                // Smooth scrolling for anchor links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+
+                        const targetId = this.getAttribute('href');
+                        if (targetId === '#') return;
+
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+
+                            // Close mobile menu if open
+                            const mobileMenu = document.getElementById('mobile-menu');
+                            if (!mobileMenu.classList.contains('hidden')) {
+                                mobileMenu.classList.add('hidden');
+                            }
+                        }
+                    });
+                });
+            </script>
 </body>
+
 </html>
