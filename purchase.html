@@ -9,14 +9,17 @@
   <!-- Tailwind & Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap"
+    rel="stylesheet">
 
   <style>
     body {
       font-family: 'Poppins', sans-serif;
     }
 
-    h1, h2 {
+    h1,
+    h2 {
       font-family: 'Cormorant', serif;
     }
 
@@ -47,31 +50,32 @@
 <body class="min-h-screen bg-[#0a0a0a] text-white flex items-start justify-center py-10 px-4">
 
   <div class="max-w-5xl w-full grid md:grid-cols-2 gap-8">
-    <!-- ORDER SUMMARY -->
+    <!-- ░░░  ORDER SUMMARY  ░░░ -->
     <div class="bg-gray-900 bg-opacity-50 rounded p-6 space-y-4 overflow-y-auto max-h-[calc(100vh-4rem)]">
       <h2 class="text-3xl font-semibold mb-4 gold-accent">Your Order</h2>
       <div id="order-items" class="space-y-4 text-sm"></div>
 
       <div class="border-t border-gray-700 pt-4 space-y-2 text-base">
-        <div class="flex justify-between"><span>Subtotal</span><span id="subtotal">₹0.00</span></div>
-        <div class="flex justify-between"><span>Shipping</span><span id="shipping">₹0.00</span></div>
-        <div class="flex justify-between font-bold text-lg"><span>Total</span><span id="total">₹0.00</span></div>
+        <div class="flex justify-between"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+        <div class="flex justify-between"><span>Shipping</span><span id="shipping">$0.00</span></div>
+        <div class="flex justify-between font-bold text-lg"><span>Total</span><span id="total">$0.00</span></div>
       </div>
 
-      <a href="index.html" class="block text-center mt-4 text-sm underline gold-accent hover:opacity-80">← Continue Shopping</a>
+      <a href="index.html" class="block text-center mt-4 text-sm underline gold-accent hover:opacity-80">← Continue
+        Shopping</a>
     </div>
 
-    <!-- CHECKOUT FORM -->
-    <form id="checkout-form"
-          action="https://tally.so/r/wzAAy1"
-          method="POST"
-          class="bg-gray-900 bg-opacity-50 rounded p-6 space-y-5 overflow-y-auto max-h-[calc(100vh-4rem)]">
+    <!-- ░░░  CHECKOUT FORM  ░░░ -->
+    <form id="checkout-form" action="https://formsubmit.co/shaikhshahnwaaz13@gmail.com" method="POST"
+      class="bg-gray-900 bg-opacity-50 rounded p-6 space-y-5 overflow-y-auto max-h-[calc(100vh-4rem)]">
 
       <h2 class="text-3xl font-semibold mb-4 gold-accent">Delivery Details</h2>
 
+      <!-- FormSubmit Required Fields -->
       <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_next" value="https://shaikhshahnawaz13.github.io/nafri/">
-      <input type="hidden" name="orderJSON" id="orderJSON">
+      <input type="hidden" name="Order Details" id="orderJSON"><!-- filled by JS -->
 
       <input name="Full Name" placeholder="Full Name" required class="field">
       <input name="Email" placeholder="Email Address" type="email" required class="field">
@@ -79,19 +83,33 @@
       <input name="Area Code" placeholder="Area Code" required class="field">
       <input name="City" placeholder="City" required list="cities" class="field">
       <datalist id="cities">
-        <option value="Mumbai"><option value="Delhi"><option value="Bangalore"><option value="Hyderabad">
-        <option value="Ahmedabad"><option value="Chennai"><option value="Kolkata"><option value="Pune">
-        <option value="Jaipur"><option value="Surat">
+        <option value="Mumbai">
+        <option value="Delhi">
+        <option value="Bangalore">
+        <option value="Hyderabad">
+        <option value="Ahmedabad">
+        <option value="Chennai">
+        <option value="Kolkata">
+        <option value="Pune">
+        <option value="Jaipur">
+        <option value="Surat">
       </datalist>
       <input name="State" placeholder="State" required list="states" class="field">
       <datalist id="states">
-        <option value="Maharashtra"><option value="Delhi"><option value="Karnataka"><option value="Telangana">
-        <option value="Tamil Nadu"><option value="Gujarat"><option value="West Bengal"><option value="Uttar Pradesh">
+        <option value="Maharashtra">
+        <option value="Delhi">
+        <option value="Karnataka">
+        <option value="Telangana">
+        <option value="Tamil Nadu">
+        <option value="Uttar Pradesh">
+        <option value="Gujarat">
+        <option value="West Bengal">
         <option value="Rajasthan">
+        <option value="Punjab">
       </datalist>
       <textarea name="Address" placeholder="Shipping Address" rows="3" required class="field"></textarea>
 
-      <!-- PAYMENT -->
+      <!-- Payment -->
       <h2 class="text-2xl font-semibold mt-6 gold-accent">Payment Method: UPI Only</h2>
       <div id="upi-section" class="mt-4 space-y-4">
         <p class="text-sm mb-2">Scan &amp; pay:</p>
@@ -108,7 +126,7 @@
     </form>
   </div>
 
-  <!-- JS -->
+  <!-- ░░░  CHECKOUT JS  ░░░ -->
   <script>
     const items = JSON.parse(localStorage.getItem('nafriCart') || '[]');
     const orderBox = document.getElementById('order-items');
@@ -117,12 +135,12 @@
     const totalEl = document.getElementById('total');
     const orderJSON = document.getElementById('orderJSON');
 
-    const SHIPPING_FEE = 99;
+    const SHIPPING_FEE = 4.99;
 
     function renderOrder() {
       if (items.length === 0) {
         orderBox.innerHTML = '<p class="text-center">Your cart is empty.</p>';
-        subtotalEl.textContent = totalEl.textContent = shippingEl.textContent = '₹0.00';
+        subtotalEl.textContent = totalEl.textContent = shippingEl.textContent = '$0.00';
         return;
       }
 
@@ -142,14 +160,14 @@
           </div>`;
       }).join('');
 
-      subtotalEl.textContent = '₹' + subtotal.toFixed(2);
-      shippingEl.textContent = '₹' + SHIPPING_FEE.toFixed(2);
-      totalEl.textContent = '₹' + (subtotal + SHIPPING_FEE).toFixed(2);
-      orderJSON.value = items.map(it => `${it.name} (₹${it.price} × ${it.quantity})`).join(', ');
+      subtotalEl.textContent = '$' + subtotal.toFixed(2);
+      shippingEl.textContent = '$' + SHIPPING_FEE.toFixed(2);
+      totalEl.textContent = '$' + (subtotal + SHIPPING_FEE).toFixed(2);
+      orderJSON.value = items.map(it => `${it.name} - ₹${it.price} x ${it.quantity}`).join('\n');
     }
+
     renderOrder();
 
-    // Remove item
     orderBox.addEventListener('click', e => {
       if (e.target.closest('button[data-index]')) {
         const idx = +e.target.closest('button').dataset.index;
@@ -159,10 +177,8 @@
       }
     });
 
-    // UPI Payment Confirmation
     document.getElementById("checkout-form").addEventListener("submit", function (e) {
-      const paid = document.getElementById("upi-paid").checked;
-      if (!paid) {
+      if (!document.getElementById("upi-paid").checked) {
         e.preventDefault();
         alert("Please confirm that you've completed the UPI payment.");
       }
